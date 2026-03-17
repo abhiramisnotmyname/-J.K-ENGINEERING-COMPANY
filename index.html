@@ -9,11 +9,12 @@
     
     <style>
         :root {
-            --primary: #0b1f38;
-            --secondary: #d42226;
-            --accent: #fbc02d;
-            --gold: #FFD700;
-            --light: #f8fafc;
+           --agri-green: #1b4332;
+            --growth-green: #2d6a4f; 
+            --soil-brown: #5d4037; 
+            --water-blue: #0077b6; 
+            --harvest-gold: #fbc02d; 
+            --light-field: #f1f8e9; 
             --white: #ffffff;
         }
 
@@ -27,7 +28,7 @@
 
         body {
             background-color: var(--light);
-            color: var(--primary);
+            color: var(--agri-green);
             overflow-x: hidden;
         }
 
@@ -71,7 +72,7 @@
 
         nav ul li a {
             text-decoration: none;
-            color: var(--primary);
+            color: var(--agri_green);
             font-weight: 600;
             transition: 0.3s;
             font-size: 0.9rem;
@@ -79,13 +80,13 @@
         }
 
         nav ul li a:hover {
-            color: var(--secondary);
+            color: var(--water-blue);
         }
 
         /* --- HERO SECTION --- */
         .hero {
             height: 100vh;
-            background: linear-gradient(rgba(11, 31, 56, 0.8), rgba(11, 31, 56, 0.85)), url('input_file_3.jpeg') center/cover no-repeat;
+            background: linear-gradient(rgba(27, 67, 50, 0.7), rgba(93, 64, 55, 0.6)), url('input_file_3.jpeg') center/cover no-repeat;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -103,7 +104,7 @@
 
         .hero-content h1 span {
             color: var(--accent);
-            text-shadow: 0 0 20px rgba(251, 192, 45, 0.5);
+            text-shadow: 0 0 20px  rgba(0,0,0,0.3);
         }
 
         /* 5 STAR BADGE */
