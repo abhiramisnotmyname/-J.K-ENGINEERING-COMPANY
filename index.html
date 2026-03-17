@@ -234,14 +234,15 @@
             font-weight: bold;
             display: inline-block;
             transition: 0.3s;
-            box-shadow: 0 10px 20px rgba(212, 34, 38, 0.3);
+            box-shadow: 0 10px 20px rgba(45, 106, 79, 0.3);
             border: none;
             cursor: pointer;
         }
 
         .btn-fancy:hover {
-            background: #b01a1e;
-            transform: scale(1.05);
+            background: var(--water-blue);
+            transform: translateY(-3px);
+            box-shadow: 0 15px 25px rgba(0, 119, 182, 0.4);
         }
 
         /* --- GALLERY --- */
@@ -261,13 +262,13 @@
 
         .gallery-grid img:hover { transform: scale(1.03); z-index: 5; }
 
-        footer {
-            background: #05101d;
-            padding: 30px;
+       footer {
+            background: #0d2119;
+            padding: 40px;
             text-align: center;
-            color: rgba(255,255,255,0.6);
-            font-size: 0.9rem;
-        }
+            color: #a3b1aa;
+            border-top: 1px solid #1b4332;
+       }
 
         /* Responsive */
         @media (max-width: 768px) {
