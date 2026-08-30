@@ -28,6 +28,16 @@ font-family:'Poppins',sans-serif;
 scroll-behavior:smooth;
 }
 
+/* Container layout using CSS Grid */
+.card-grid 
+{
+      display: grid;
+      /* Automatically creates columns that are at least 280px wide and expand equally */
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      padding: 20px;
+      background-color: #3b322a;    
+}
 body{
 background-color:var(--white);
 color:var(--agri-green);
@@ -161,29 +171,39 @@ transition:0.5s;
 transform:scale(1.02);
 }
 
-.feature-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-gap:30px;
+.feature-grid {
+  display: grid;
+  /* Automatically adjusts column count and scales card widths to fill available space */
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  /* Ensures all grid tracks stretch to equal heights */
+  align-items: stretch;
 }
 
-.feature-card{
-background:RGB(197,178,165);
-padding:40px;
-border-radius:15px;
-text-align:center;
-box-shadow:0 10px 30px rgba(0,0,0,0.05);
-border-bottom:4px solid var(--growth-green);
-transition:0.3s;
+.feature-card {
+  background: rgb(197, 178, 165);
+  padding: 40px;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  border-bottom: 4px solid var(--growth-green);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  /* Makes the card height self-adjust dynamically to fill the grid row */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Vertically centers the text/content inside */
+  height: 100%;
+  box-sizing: border-box; /* Prevents padding from breaking height alignment */
 }
 
-.feature-card:hover{
-transform:translateY(-10px);
+.feature-card:hover {
+  transform: translateY(-10px);
 }
 
-.feature-card h3{
-margin-bottom:15px;
-color:var(--growth-green);
+.feature-card h3 {
+  margin-bottom: 15px;
+  color: var(--growth-green);
 }
 
 /* CONTACT */
